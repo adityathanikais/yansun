@@ -1,0 +1,104 @@
+═══════════════════════════════════════════════════════
+  YANSUN WEBSITE — DEPLOY GUIDE (GitHub + Vercel)
+═══════════════════════════════════════════════════════
+
+FILES IN THIS FOLDER
+  • index.html               → Homepage (calculator + contact form)
+  • solar-for-homes.html      → Solar for Homes
+  • solar-for-business.html   → Solar for Business
+  • invest-in-solar.html      → Invest in Solar
+  • styles.css                → Shared styling
+  • images/                   → All photos + logos
+  • vercel.json               → Vercel config (clean URLs)
+  • DEPLOY-GUIDE.txt           → this file
+
+
+───────────────────────────────────────────────────────
+WHERE DO CONTACT-FORM SUBMISSIONS GO?
+───────────────────────────────────────────────────────
+The "Send my request" form uses Web3Forms. Submissions are
+emailed to:  aditya@abarrelcompany.com
+
+The access key is ALREADY in the site — no setup needed.
+There is NO server to run; it works on Vercel out of the box.
+
+To change the destination email later, log in at web3forms.com
+with the account that owns this key. (To use a different key,
+edit the access_key value near the contact form in index.html.)
+
+After deploying, send yourself one test submission so you can
+confirm it arrives (check spam on the first one).
+
+
+───────────────────────────────────────────────────────
+STEP 1 — PREVIEW ON YOUR COMPUTER
+───────────────────────────────────────────────────────
+Double-click index.html to open it in your browser. Click
+through all 4 pages. (The form only delivers once the site is
+live on the web — it won't send from a local file open.)
+
+
+───────────────────────────────────────────────────────
+STEP 2 — PUT THE CODE ON GITHUB
+───────────────────────────────────────────────────────
+Easiest (no command line):
+  1. Go to  https://github.com  and sign in (or sign up).
+  2. Click  New repository.  Name it e.g. "yansun-website".
+     Keep it Public or Private — both work. Click Create.
+  3. On the new repo page, click  "uploading an existing file".
+  4. Drag EVERYTHING inside this folder (index.html, styles.css,
+     the images folder, vercel.json, etc.) into the page.
+     IMPORTANT: upload the FILES, not the outer zip.
+  5. Click  Commit changes.
+
+
+───────────────────────────────────────────────────────
+STEP 3 — DEPLOY ON VERCEL
+───────────────────────────────────────────────────────
+  1. Go to  https://vercel.com  and  "Continue with GitHub".
+  2. Click  Add New → Project.
+  3. Find your "yansun-website" repo and click  Import.
+  4. Framework Preset:  Other  (it's a plain static site).
+     Leave Build Command and Output Directory BLANK.
+  5. Click  Deploy.  Wait ~30 seconds.
+  6. You get a live URL like  yansun-website.vercel.app.
+     Open it and test the form (send yourself a test lead).
+
+
+───────────────────────────────────────────────────────
+STEP 4 — CONNECT yansungroups.com
+───────────────────────────────────────────────────────
+  1. In your Vercel project:  Settings → Domains.
+  2. Type  yansungroups.com  and click  Add.
+  3. Vercel shows you DNS records to set. Log in to GoDaddy
+     (where the domain is registered) → DNS settings, and add
+     the records Vercel gives you. Typically:
+        • An  A record  for "@"  → 76.76.21.21
+        • A  CNAME  for "www"   → cname.vercel-dns.com
+     (Use whatever Vercel actually shows — it's authoritative.)
+  4. Wait for it to verify (minutes to a couple of hours).
+     HTTPS is automatic. Done.
+
+
+───────────────────────────────────────────────────────
+UPDATING THE SITE LATER
+───────────────────────────────────────────────────────
+Edit a file on GitHub (or re-upload), Commit, and Vercel
+redeploys automatically within seconds. No extra steps.
+
+
+───────────────────────────────────────────────────────
+QUICK TROUBLESHOOTING
+───────────────────────────────────────────────────────
+• Form shows success but no email arrives:
+    → access key not pasted, or pasted wrong. Re-check the
+      "WHERE DO SUBMISSIONS GO" step.
+    → check your spam folder for the first one.
+• Images missing after deploy:
+    → make sure the whole "images" folder was uploaded to GitHub.
+• Domain not working:
+    → DNS can take time; confirm the GoDaddy records match
+      exactly what Vercel shows under Settings → Domains.
+
+Questions on any step — just ask.
+═══════════════════════════════════════════════════════
