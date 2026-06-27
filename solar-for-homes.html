@@ -222,5 +222,8 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(
 setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in')),3000);
 document.getElementById('menuBtn').onclick=()=>{const n=document.querySelector('.nav-links');n.style.cssText='display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--cream);padding:20px 24px;gap:18px;border-bottom:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.1)'};
 </script>
+<!-- Vercel Web Analytics -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
