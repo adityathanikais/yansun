@@ -258,11 +258,11 @@ footer ul li a:hover{color:var(--orange-dark)}
 .scard-body{padding:20px 22px 22px}
 .scard-stats{display:flex;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
 .scard-stats>div{flex:1}
-.scard-stats b{display:block;font-family:var(--font-display);font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--ink);line-height:1.05}
+.scard-stats b{display:block;font-family:var(--font-display);font-size:21px;font-weight:600;letter-spacing:-.02em;color:var(--ink);line-height:1.1;white-space:nowrap}
 .scard-stats b em{font-style:normal;font-size:13.5px;color:var(--ink-soft);font-weight:500}
-.scard-stats span{font-size:12.5px;color:var(--muted);margin-top:4px;display:block}
+.scard-stats>div>span{font-size:12.5px;color:var(--muted);margin-top:4px;display:block}
 .scard-stats>div:first-child b{color:var(--orange-dark)}
-.scard-bill{padding:18px 0;border-bottom:1px solid var(--line)}
+.scard-bill{padding:18px 0 4px}
 .bill-line{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-soft);margin-bottom:7px}
 .bill-line .bn{color:var(--orange-dark);font-weight:600}
 .scard-bill .bar{height:8px;background:var(--cream-2);border-radius:6px;overflow:hidden;margin-bottom:14px}
@@ -272,25 +272,13 @@ footer ul li a:hover{color:var(--orange-dark)}
 .bar-new{background:linear-gradient(90deg,var(--orange),var(--orange-dark))}
 .scard.go .bar-old{width:100%}
 .scard.go .bar-new{width:12%}
-.scard-live{padding-top:16px}
-.live-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}
-.live-head>span:first-child{font-size:12.5px;color:var(--ink-soft);display:flex;align-items:center;gap:7px}
-.live-head>span:first-child::before{content:"";width:7px;height:7px;border-radius:50%;background:#37c871;animation:livePulse 2s ease-out infinite}
-.live-time{font-size:11.5px;color:var(--muted)}
-@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(55,200,113,.5)}70%{box-shadow:0 0 0 7px rgba(55,200,113,0)}100%{box-shadow:0 0 0 0 rgba(55,200,113,0)}}
-.live-row{display:flex;justify-content:space-between;align-items:flex-end}
-.live-row b{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-.spark{display:flex;align-items:flex-end;gap:3px;height:30px}
-.spark i{width:5px;border-radius:2px;background:rgba(240,127,26,.55)}
-.spark i:nth-child(1){height:35%}.spark i:nth-child(2){height:55%}.spark i:nth-child(3){height:45%}.spark i:nth-child(4){height:70%}.spark i:nth-child(5){height:58%}.spark i:nth-child(6){height:85%}.spark i:nth-child(7){height:72%}.spark i:nth-child(8){height:96%}
-.scard-foot{margin-top:16px;font-size:11px;color:var(--muted);text-align:center}
+.scard-foot{margin-top:18px;font-size:11px;color:var(--muted);text-align:center}
 @media(max-width:860px){
   .benefit-grid{grid-template-columns:1fr;gap:38px}
   .benefit-copy p{max-width:none}
 }
 @media(prefers-reduced-motion:reduce){
   .scard-cells i,.scard-bill .bar i{transition:none!important}
-  .live-head>span:first-child::before{animation:none!important}
 }
 
 /* phone frame around the savings card */
