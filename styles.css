@@ -302,54 +302,13 @@ footer ul li a:hover{color:var(--orange-dark)}
 .offer p{font-size:14.5px;color:var(--ink-soft);line-height:1.62}
 .offer .ovis{margin-top:22px}
 
-/* 3D model card visual — rotating wireframe cube */
-.cube-wrap{height:120px;display:flex;align-items:center;justify-content:center;perspective:600px}
-.cube{position:relative;width:74px;height:74px;transform-style:preserve-3d;animation:spinCube 9s linear infinite}
-.offer:hover .cube{animation-duration:3.4s}
-.cube .face{position:absolute;width:74px;height:74px;border:1.5px solid rgba(240,127,26,.55);background:rgba(240,127,26,.06)}
-.cube .f-front{transform:translateZ(37px)}
-.cube .f-back{transform:rotateY(180deg) translateZ(37px)}
-.cube .f-right{transform:rotateY(90deg) translateZ(37px)}
-.cube .f-left{transform:rotateY(-90deg) translateZ(37px)}
-.cube .f-top{transform:rotateX(90deg) translateZ(37px)}
-.cube .f-bottom{transform:rotateX(-90deg) translateZ(37px)}
-@keyframes spinCube{0%{transform:rotateX(-22deg) rotateY(0)}100%{transform:rotateX(-22deg) rotateY(360deg)}}
-
-/* support / 24-7 visual — pulsing clock dot */
-.pulse-vis{display:flex;align-items:center;gap:14px}
-.pulse-dot{position:relative;width:11px;height:11px;border-radius:50%;background:#5fd896;flex-shrink:0}
-.pulse-dot::after{content:"";position:absolute;inset:-6px;border-radius:50%;background:rgba(95,216,150,.4);animation:ping 2s cubic-bezier(0,0,.2,1) infinite}
-.pulse-vis b{font-family:var(--font-display);font-size:30px;font-weight:600;letter-spacing:-.02em}
-.pulse-vis span{font-size:13px;color:var(--muted)}
-
-/* app card — mini live bars */
-.app-vis{display:flex;align-items:flex-end;gap:6px;height:64px;margin-top:6px}
-.app-vis i{display:block;width:9px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--orange),var(--orange-dark));animation:barPulse 2.4s ease-in-out infinite}
-.app-vis i:nth-child(1){height:40%;animation-delay:0s}
-.app-vis i:nth-child(2){height:66%;animation-delay:.2s}
-.app-vis i:nth-child(3){height:50%;animation-delay:.4s}
-.app-vis i:nth-child(4){height:82%;animation-delay:.6s}
-.app-vis i:nth-child(5){height:60%;animation-delay:.8s}
-.app-vis i:nth-child(6){height:94%;animation-delay:1s}
-.app-vis i:nth-child(7){height:72%;animation-delay:1.2s}
-@keyframes barPulse{0%,100%{transform:scaleY(.82);opacity:.75}50%{transform:scaleY(1);opacity:1}}
-
-/* recycle card — three-arrow mark, gentle rotation */
-.recycle-vis{display:flex;align-items:center;justify-content:flex-start}
-.recycle-vis svg{width:60px;height:60px}
-.recycle-rot{transform-origin:32px 32px;animation:slowSpin 10s linear infinite}
-.offer:hover .recycle-rot{animation-duration:3.5s}
-@keyframes slowSpin{to{transform:rotate(360deg)}}
-
-/* consult card — concentric ring */
-.consult-vis{position:relative;width:64px;height:64px}
-.consult-vis span{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(240,127,26,.5)}
-.consult-vis span:nth-child(2){inset:9px;border-color:rgba(240,127,26,.7);animation:breathe 3s ease-in-out infinite}
-.consult-vis span:nth-child(3){inset:22px;background:var(--orange);border:none}
-@keyframes breathe{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.12);opacity:1}}
+/* Offering card icons — one cohesive line-icon set in a soft tinted tile, calm by default */
+.oicon{width:58px;height:58px;border-radius:16px;background:rgba(240,127,26,.09);display:flex;align-items:center;justify-content:center;color:var(--orange);transition:transform .45s cubic-bezier(.2,.6,.2,1),background .35s,color .35s}
+.oicon svg{width:28px;height:28px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.offer:hover .oicon{transform:translateY(-4px);background:rgba(240,127,26,.16);color:var(--orange-dark)}
 
 @media(prefers-reduced-motion:reduce){
-  .cube,.recycle-rot,.app-vis i,.pulse-dot::after,.consult-vis span{animation:none!important}
+  .oicon{transition:none!important}
   .offer{opacity:1;transform:none}
 }
 
