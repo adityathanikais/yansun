@@ -154,7 +154,7 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;bac
 
 /* Stats band */
 .band{padding:96px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+.band-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;text-align:center}
 .band .s b{font-family:var(--font-display);font-size:clamp(40px,5vw,58px);font-weight:600;color:var(--ink);line-height:1;display:block;letter-spacing:-.03em;white-space:nowrap}
 .band .s b.accent-num{color:var(--orange)}
 .band .s b .unit{font-size:.62em;font-weight:600}
