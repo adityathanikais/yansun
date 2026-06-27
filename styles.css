@@ -231,6 +231,10 @@ footer ul li a{font-size:14.5px;transition:color .15s}
 footer ul li a:hover{color:var(--orange-dark)}
 .foot-contact p{font-size:14.5px;margin-bottom:13px;display:flex;gap:11px;align-items:flex-start;line-height:1.5}
 .foot-contact a:hover{color:var(--orange-dark)}
+.foot-social{display:flex;gap:12px;margin-top:18px}
+.foot-social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);color:var(--ink-soft);transition:color .2s,border-color .2s,transform .2s}
+.foot-social a:hover{color:var(--orange-dark);border-color:var(--orange);transform:translateY(-2px)}
+.foot-social svg{width:18px;height:18px}
 .foot-bottom{padding-top:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted)}
 
 /* Reveal */
